@@ -186,4 +186,125 @@ body, html {
   user-select: none;
   pointer-events: none;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 }
+
+/* --- Top bar (only name for now) --- */
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+}
+
+.brand {
+  margin-left: clamp(16px, 4vw, 40px);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: rgba(255,255,255,0.9);
+}
+
+/* --- Hero 2-column layout --- */
+.hero {
+  position: relative;
+  z-index: 20;
+  height: 100%;
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+
+  padding-top: 120px; /* space for topbar */
+}
+
+/* Left column */
+.hero-left {
+  max-width: 680px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.12);
+  margin-bottom: 18px;
+}
+
+.hero-title {
+  margin: 0;
+  color: #ffffff; /* main blurb white */
+  font-size: clamp(44px, 5.2vw, 76px);
+  line-height: 1.02;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+  margin-top: 18px;
+  color: rgba(255,255,255,0.72); /* slightly transparent */
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+/* Right column bubbles */
+.hero-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-content: start;
+}
+
+.bubble {
+  padding: 18px;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.10);
+  min-height: 120px;
+}
+
+.bubble-title {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 650;
+  color: rgba(170, 190, 255, 0.95);
+}
+
+.bubble-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.78);
+}
+
+.bubble-outline {
+  background: rgba(255,255,255,0.05);
+  border: 1px dashed rgba(255,255,255,0.22);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .hero-right {
+    grid-template-columns: 1fr;
+  }
+}
+
