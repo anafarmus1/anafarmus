@@ -116,7 +116,7 @@ body, html {
   top: 0;
   left: 0;
   right: 0;
-  height: 14px; /* slightly shorter */
+  height: 64px; /* slightly shorter */
   display: flex;
   align-items: center;
   z-index: 30;
