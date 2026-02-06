@@ -9,20 +9,20 @@ body, html {
 .header {
   position: relative;
   width: 100%;
-  height: 100vh; /* shortened */
+  height: 130vh; /* unshortened */
   overflow: hidden;
 }
 
 /* Responsive header height */
 @media (max-width: 900px) {
   .header {
-    height: 140vh;
+    height: 160vh;
   }
 }
 
 @media (max-width: 600px) {
   .header {
-    height: 100vh;
+    height: 130vh;
   }
 }
 
@@ -172,7 +172,7 @@ body, html {
   gap: 44px;
 
   align-items: start;      /* was center: brings content upwards */
-  padding-top: 32px;        /* accounts for shorter topbar */
+  padding-top: 64px;        
 }
 
 /* Left column */
@@ -222,7 +222,7 @@ body, html {
   align-content: start;
 
   padding-top: 32px;      /* was 32px */
-  margin-top: 20px;    /* small nudge down */
+  margin-top: 40px;    /* small nudge down */
 }
 
 
