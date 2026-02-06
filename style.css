@@ -172,7 +172,7 @@ body, html {
   gap: 44px;
 
   align-items: start;      /* was center: brings content upwards */
-  padding-top: 8px;        /* accounts for shorter topbar */
+  padding-top: 32px;        /* accounts for shorter topbar */
 }
 
 /* Left column */
@@ -222,7 +222,7 @@ body, html {
   align-content: start;
 
   padding-top: 32px;      /* was 32px */
-  margin-top: 18px;    /* small nudge down */
+  margin-top: 20px;    /* small nudge down */
 }
 
 
