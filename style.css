@@ -9,20 +9,20 @@ body, html {
 .header {
   position: relative;
   width: 100%;
-  height: 130vh; /* shortened */
+  height: 100vh; /* shortened */
   overflow: hidden;
 }
 
 /* Responsive header height */
 @media (max-width: 900px) {
   .header {
-    height: 160vh;
+    height: 140vh;
   }
 }
 
 @media (max-width: 600px) {
   .header {
-    height: 130vh;
+    height: 100vh;
   }
 }
 
@@ -116,14 +116,18 @@ body, html {
   top: 0;
   left: 0;
   right: 0;
-  height: 64px; /* slightly shorter */
+  height: 64px;
   display: flex;
   align-items: center;
+  justify-content: space-between; /* name left, timestamp right */
+  padding-left: 56px;
+  padding-right: 56px;
   z-index: 30;
 
   background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
+
 
 .topbar-inner {
   width: 100%;                 /* allow full width */
@@ -168,12 +172,14 @@ body, html {
   gap: 44px;
 
   align-items: start;      /* was center: brings content upwards */
-  padding-top: 20px;        /* accounts for shorter topbar */
+  padding-top: 8px;        /* accounts for shorter topbar */
 }
 
 /* Left column */
 .hero-left {
   max-width: 680px;
+  margin-top: 0;          /* keep header section higher */
+  padding-top: 0;
  /* padding-top: ; /* was 32px */
 }
 
@@ -215,7 +221,7 @@ body, html {
   gap: 18px;
   align-content: start;
 
-  padding-top: 32;      /* was 32px */
+  padding-top: 32px;      /* was 32px */
   margin-top: 18px;    /* small nudge down */
 }
 
