@@ -168,13 +168,13 @@ body, html {
   gap: 44px;
 
   align-items: center;      /* was start: brings content toward middle */
-  padding-top: 64px;        /* accounts for shorter topbar */
+  padding-top: 24px;        /* accounts for shorter topbar */
 }
 
 /* Left column */
 .hero-left {
   max-width: 680px;
-  padding-top: 0; /* was 32px */
+  padding-top: 20; /* was 32px */
 }
 
 
