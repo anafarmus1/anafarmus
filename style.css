@@ -116,7 +116,7 @@ body, html {
   top: 0;
   left: 0;
   right: 0;
-  height: 64px; /* slightly shorter */
+  height: 14px; /* slightly shorter */
   display: flex;
   align-items: center;
   z-index: 30;
@@ -136,10 +136,10 @@ body, html {
 }
 
 .brand {
-  font-size: 20px;  /* slightly larger */
-  font-weight: 600;
+  font-size: 25px;  /* slightly larger */
+  font-weight: 550;
   letter-spacing: 0.2px;
-  color: #111;
+  color: #24151B;
 }
 
 /* Timestamp now styled to sit next to name */
@@ -174,7 +174,7 @@ body, html {
 /* Left column */
 .hero-left {
   max-width: 680px;
-  padding-top: 20; /* was 32px */
+  padding-top: 18; /* was 32px */
 }
 
 
