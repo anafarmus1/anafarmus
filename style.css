@@ -167,14 +167,14 @@ body, html {
   grid-template-columns: 1fr 1.1fr;
   gap: 44px;
 
-  align-items: center;      /* was start: brings content toward middle */
-  padding-top: 24px;        /* accounts for shorter topbar */
+  align-items: start;      /* was center: brings content upwards */
+  padding-top: 20px;        /* accounts for shorter topbar */
 }
 
 /* Left column */
 .hero-left {
   max-width: 680px;
-  padding-top: 18; /* was 32px */
+ /* padding-top: ; /* was 32px */
 }
 
 
@@ -215,7 +215,7 @@ body, html {
   gap: 18px;
   align-content: start;
 
-  padding-top: 0;      /* was 32px */
+  padding-top: 32;      /* was 32px */
   margin-top: 18px;    /* small nudge down */
 }
 
