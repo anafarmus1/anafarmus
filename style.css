@@ -172,7 +172,7 @@ body, html {
   gap: 44px;
 
   align-items: start;      /* was center: brings content upwards */
-  padding-top: 84px;        
+  padding-top: 96px;        
 }
 
 /* Left column */
@@ -201,7 +201,7 @@ body, html {
   color: #ffffff;
   font-size: clamp(36px, 4.4vw, 62px); /* smaller than before */
   line-height: 1.06;
-  font-weight: 520; /* lighter than 650 */
+  font-weight: 450; /* lighter than 650 */
   letter-spacing: -0.02em;
 }
 
@@ -221,8 +221,8 @@ body, html {
   gap: 18px;
   align-content: start;
 
-  padding-top: 32px;      /* was 32px */
-  margin-top: 40px;    /* small nudge down */
+  padding-top: 32px;     
+  margin-top: 60px;    /* small nudge down */
 }
 
 
