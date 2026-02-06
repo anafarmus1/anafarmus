@@ -116,7 +116,7 @@ body, html {
   top: 0;
   left: 0;
   right: 0;
-  height: 72px;
+  height: 64px; /* slightly shorter */
   display: flex;
   align-items: center;
   z-index: 30;
@@ -125,56 +125,58 @@ body, html {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* Put name + timestamp on one line */
 .topbar-inner {
-  width: min(1120px, 92vw);
-  margin: 0 auto;
+  width: 100%;                 /* allow full width */
+  margin: 0;
+  padding-left: 56px;          /* more space from left edge */
+  padding-right: 56px;         /* space from right edge */
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between; /* name left, timestamp right */
 }
 
 .brand {
-  font-size: 18px;
+  font-size: 20px;  /* slightly larger */
   font-weight: 600;
   letter-spacing: 0.2px;
-  color: #111; /* black */
+  color: #111;
 }
 
 /* Timestamp now styled to sit next to name */
 #last-updated {
-  position: static;            /* no longer fixed */
+  position: static;
   font-size: 0.85rem;
-  color: rgba(0, 0, 0, 0.55);  /* subtle gray on white bar */
+  color: rgba(0, 0, 0, 0.55);
   font-weight: 400;
   letter-spacing: 0.2px;
   user-select: none;
   pointer-events: none;
+  white-space: nowrap;
+  text-align: right;
 }
 
-/* --- Hero 2-column layout --- */
 .hero {
   position: relative;
   z-index: 20;
   height: 100%;
 
-  width: min(1240px, 92vw); /* slightly wider overall */
+  width: min(1240px, 92vw);
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 1fr 1.1fr; /* make right column wider = wider bubbles */
+  grid-template-columns: 1fr 1.1fr;
   gap: 44px;
 
-  align-items: start; /* pushes content higher instead of vertical-centering */
-
-  padding-top: 88px;  /* was 120px: moves the whole content up */
+  align-items: center;      /* was start: brings content toward middle */
+  padding-top: 64px;        /* accounts for shorter topbar */
 }
 
 /* Left column */
 .hero-left {
   max-width: 680px;
-  padding-top: 32px; /* small nudge down from topbar */
+  padding-top: 0; /* was 32px */
 }
+
 
 .pill {
   display: inline-block;
@@ -190,12 +192,13 @@ body, html {
 
 .hero-title {
   margin: 0;
-  color: #ffffff; /* main blurb white */
-  font-size: clamp(44px, 5.2vw, 76px);
-  line-height: 1.02;
-  font-weight: 650;
-  letter-spacing: -0.03em;
+  color: #ffffff;
+  font-size: clamp(36px, 4.4vw, 62px); /* smaller than before */
+  line-height: 1.06;
+  font-weight: 520; /* lighter than 650 */
+  letter-spacing: -0.02em;
 }
+
 
 .hero-subtitle {
   margin-top: 18px;
@@ -211,8 +214,11 @@ body, html {
   grid-template-columns: 1fr 1fr;
   gap: 18px;
   align-content: start;
-  padding-top: 32px; /* aligns bubbles with left content */
+
+  padding-top: 0;      /* was 32px */
+  margin-top: 18px;    /* small nudge down */
 }
+
 
 .bubble {
   padding: 20px;           /* slightly larger */
@@ -245,14 +251,15 @@ body, html {
   border: 1px dashed rgba(255,255,255,0.22);
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
     gap: 28px;
-    padding-top: 86px;
+    padding-top: 64px;
+    align-items: start;
   }
   .hero-right {
     grid-template-columns: 1fr;
+    margin-top: 0;
   }
 }
